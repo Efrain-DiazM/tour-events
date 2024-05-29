@@ -80,15 +80,15 @@ public class EventDto {
         this.availabilityDto = availabilityDto;
     }
 
-    public int getTotalAvailableTickets() {
-        int totalAvailableTickets = 0;
-        if (tickets != null) {
-            for (TicketDto ticket : tickets) {
-                totalAvailableTickets += ticket.getNumberDto();
-            }
-        }
-        return totalAvailableTickets;
-    }
+//    public int getTotalAvailableTickets() {
+//        int totalAvailableTickets = 0;
+//        if (tickets != null) {
+//            for (TicketDto ticket : tickets) {
+//                totalAvailableTickets += ticket.getNumberDto();
+//            }
+//        }
+//        return totalAvailableTickets;
+//    }
 
     public void setTickets(List<TicketDto> tickets) {
         this.tickets = tickets;

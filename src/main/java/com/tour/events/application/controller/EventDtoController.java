@@ -50,15 +50,15 @@ public class EventDtoController {
         }
         return ResponseEntity.ok(eventDtoService.save(eventSaveDto));
     }
-    @GetMapping("/{id}/availability")
-    public ResponseEntity<Integer> getEventAvailability(@PathVariable("id") int eventId) {
-        int availability = eventDtoService.calculateTotalAvailableTickets(eventId);
-        if (availability >= 0) {
-            return ResponseEntity.ok(availability);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
+//    @GetMapping("/{id}/availability")
+//    public ResponseEntity<Integer> getEventAvailability(@PathVariable("id") int eventId) {
+//        int availability = eventDtoService.calculateTotalAvailableTickets(eventId);
+//        if (availability >= 0) {
+//            return ResponseEntity.ok(availability);
+//        } else {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
 
     @PutMapping("/{id}")
     public ResponseEntity<EventSaveDto> updateEvent(@PathVariable int id, @RequestBody EventSaveDto eventSaveDto) {

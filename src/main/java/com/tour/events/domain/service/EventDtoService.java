@@ -40,15 +40,15 @@ public class EventDtoService {
         return eventRepo.save(eventSaveDto);
     }
 
-    public int calculateTotalAvailableTickets(int eventId) {
-        Optional<EventDto> optionalEvent = eventRepo.getById(eventId);
-        if (optionalEvent.isPresent()) {
-            EventDto event = optionalEvent.get();
-            return event.getTotalAvailableTickets();
-        } else {
-            return -1; // Manejo de caso en el que el evento no existe
-        }
-    }
+//    public int calculateTotalAvailableTickets(int eventId) {
+//        Optional<EventDto> optionalEvent = eventRepo.getById(eventId);
+//        if (optionalEvent.isPresent()) {
+//            EventDto event = optionalEvent.get();
+//            return event.getTotalAvailableTickets();
+//        } else {
+//            return -1; // Manejo de caso en el que el evento no existe
+//        }
+//    }
 
     public EventSaveDto updateEvent(EventSaveDto eventSaveDto) throws Exception {
         Optional<EventSaveDto> optionalEvent = eventRepo.getByIdSave(eventSaveDto.getIdDto());

@@ -32,8 +32,8 @@ public class EventSaveDto {
     @PositiveOrZero(message = "La capacidad debe ser un número positivo o cero")
     private Integer capacityDto;
 
-    @NotNull(message = "La disponibilidad no puede ser nula")
-    @PositiveOrZero(message = "La disponibilidad debe ser un número positivo o cero")
+//    @NotNull(message = "La disponibilidad no puede ser nula")
+//    @PositiveOrZero(message = "La disponibilidad debe ser un número positivo o cero")
     private Integer availabilityDto;;
     private String typeDto;
     private String cityDto;
